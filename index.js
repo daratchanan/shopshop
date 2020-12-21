@@ -1,13 +1,17 @@
 require("dotenv").config();
+
 const express = require("express");
 const db = require("./models");
 const app = express();
+
+require("./config/passport");
 
 const userRoutes = require("./routes/user");
 const productRoutes = require("./routes/product");
 const cartItemRoutes = require("./routes/cartItem");
 const orderRoutes = require("./routes/order");
 
+app.use(require('cors')());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -15,6 +19,11 @@ app.use("/users", userRoutes);
 app.use("/products", productRoutes);
 app.use("/cartItems", cartItemRoutes);
 app.use("/orders", orderRoutes);
+
+app.use((err, req, res, next) => {
+   console.log(err);
+   res.status(500).json({ message: `what happen ${err.message}` });
+});
 
 
 app.listen(process.env.PORT, () => {

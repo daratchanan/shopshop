@@ -1,7 +1,14 @@
 const db = require("../models");
 
 exports.getAllCartItem = async (req, res) => {
-  const cartItem = await db.CartItem.findAll({});
+  const cartItem = await db.CartItem.findAll({ 
+    where : {
+      user_id: req.user.id
+    },
+    include: {
+      model: db.Product
+    }
+  });
   res.status(200).json({ cartItem });
 };
 
@@ -20,9 +27,8 @@ exports.createCartItem = async (req, res) => {
     const { quantity, product_id } = req.body;
 
     if (!quantity) return res.status(400).json({ message: "quantity is require" });
-    if (!user_id) return res.status(400).json({ message: "user_id is require" });
     if (!product_id) return res.status(400).json({ message: "product_id is require" });
-
+    
     const cartItem = await db.CartItem.create({
       quantity,
       product_id,
@@ -42,12 +48,17 @@ exports.updateCartItem = async (req, res) => {
   const { quantity, product_id } = req.body;
 
   const cartItem = await db.CartItem.findOne( {where: {id}} );
+  console.log('cartItem',cartItem)
+  console.log('quantity',quantity)
 
   if (quantity) cartItem.quantity = quantity;
-  if (user_id) cartItem.user_id = user_id;
+  //if (user_id) cartItem.user_id = user_id;
   if (product_id) cartItem.product_id = product_id;
-  
-  await cartItem.save();
+  try{
+    await cartItem.save();
+  }catch(err){
+    console.error(err)
+  }
 
   res.status(200).json({ cartItem });
 };

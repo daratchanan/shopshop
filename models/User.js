@@ -3,17 +3,17 @@ module.exports = (sequelize, DataTypes) => {
       firstname: {
          type: DataTypes.STRING,
          allowNull: false,
-         validate:{
-            max:16,
-            min:3
+         validate: {
+            max: 16,
+            min: 3
          }
       },
       lastname: {
          type: DataTypes.STRING,
          allowNull: false,
-         validate:{
-            max:16,
-            min:3
+         validate: {
+            max: 16,
+            min: 3
          }
       },
       email: {
@@ -25,8 +25,8 @@ module.exports = (sequelize, DataTypes) => {
          type: DataTypes.STRING,
          allowNull: false,
          validate: {
-            max:16,
-            min:6
+            max: 16,
+            min: 6
          }
       },
       phone_number: {
@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
          allowNull: false
       },
       address: {
-      type: DataTypes.STRING
+         type: DataTypes.STRING
       }
    }, {
       tableName: "users",

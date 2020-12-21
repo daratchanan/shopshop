@@ -14,7 +14,7 @@ const register = async (req, res) => {
          const salt = bcryptjs.genSaltSync(Number(process.env.SALT_ROUND));
          const hashedPwd = bcryptjs.hashSync(password, salt);
 
-         await db.User.create({
+         const newUser = await db.User.create({
             firstname,
             lastname,
             email,
@@ -22,7 +22,15 @@ const register = async (req, res) => {
             address,
             password: hashedPwd
          });
-         res.status(201).send({ message: "User created." });
+
+         const payLoad = {
+            id: newUser.id,
+            firstname: newUser.firstname,
+            email: newUser.email,
+         };
+         const token = jwt.sign(payLoad, process.env.SECRET, { expiresIn: 86400 });
+
+         res.status(201).send({ message: "User created.", token });
       }
    } catch (err) {
       res.status(500).send({ message: err.message }); ''
@@ -44,7 +52,7 @@ const login = async (req, res) => {
                firstname: targetUser.firstname,
                email: targetUser.email,
             };
-            const token = jwt.sign(payLoad, process.env.SECRET, { expiresIn: 3600 });
+            const token = jwt.sign(payLoad, process.env.SECRET, { expiresIn: 86400 });
             res.status(200).send({ token });
          } else {
             res.status(400).send({ message: "email or password incorrect" });

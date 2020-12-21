@@ -17,12 +17,12 @@ exports.getOrderById = async (req, res) => {
 
 exports.createOrder = async (req, res) => {
    try {
-      const { date, total_price, delivery_date, user_id } = req.body;
+      const { date, total_price, delivery_date } = req.body;
       const order = await db.Order.create({
          date,
          total_price,
          delivery_date,
-         user_id,
+         user_id: req.user.id
        });
 
        res.status(201).json({ order });
