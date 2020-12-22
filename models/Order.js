@@ -1,13 +1,13 @@
 module.exports = (sequelize, DataTypes) => {
    const Order = sequelize.define("Order", {
       date: {
-         type: DataTypes.STRING
+         type: DataTypes.DATE
       },
       total_price: {
-         type: DataTypes.FLOAT,
+         type: DataTypes.FLOAT
       },
       delivery_date: {
-         type: DataTypes.STRING
+         type: DataTypes.DATE
       },
 
    }, {

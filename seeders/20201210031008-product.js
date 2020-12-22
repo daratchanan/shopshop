@@ -5,7 +5,7 @@ module.exports = {
     return queryInterface.bulkInsert('products', [
       {
         name: 'OLED TV 55" LG OLED55CXPTA.ATM',
-        price: 74990,
+        price: 50000,
         description:'AI Picture Pro removes noise, and optimizes contrast and saturation. The result is crisp, higher quality visuals.',
         total_sale: '8',
         createdAt: new Date(),
@@ -15,7 +15,7 @@ module.exports = {
       },
       {
         name: 'OLED TV PHILIPS 55OLED804 55”',
-        price: 48990,
+        price: 40000,
         description:'PHILIPS Ambilight features intelligent LEDs around the edges of the TV, casting on-screen colors onto the walls in real time.',
         total_sale: '10',
         createdAt: new Date(),
@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         name: 'REFRIGERATOR BOSCH 21Q SILVER',
-        price: 38990,
+        price: 35000,
         description:'SbS Fridge net Capacity: 604 l / 21Q',
         total_sale: '12',
         createdAt: new Date(),
@@ -35,7 +35,7 @@ module.exports = {
       },
       {
         name: 'REFRIGERATOR TEKA 21Q BLACK',
-        price: 69990,
+        price: 60000,
         description:'SIDE-BY-SIDE REFRIGERATOR TEKA NFD 650 SBS 21Q BLACK',
         total_sale: '7',
         createdAt: new Date(),
@@ -45,7 +45,7 @@ module.exports = {
       },
       {
         name: 'REFRIGERATOR LG GC-B247KQDV 21.6Q STAINLESS',
-        price: 33290,
+        price: 33000,
         description:'Inverter Linear Compressor generates less internal friction, resulting in lower energy consumption.',
         total_sale: '10',
         createdAt: new Date(),
@@ -55,7 +55,7 @@ module.exports = {
       },
       {
         name: 'WALL AIR CONDITIONER MITSUBISHI 12283BTU INVERTER',
-        price: 24600,
+        price: 25000,
         description:'Inverter Compressor works quietly and effectively to create quick and cool air while keeping the low energy-consumption.',
         total_sale: '14',
         createdAt: new Date(),
@@ -65,7 +65,7 @@ module.exports = {
       },
       {
         name: 'WALL AIR CONDITIONER MITSUBISHI 8871BTU INVERTER',
-        price: 39000,
+        price: 35000,
         description:'Inverter Compressor works quietly while maintaining low energy-consumption.',
         total_sale: '18',
         createdAt: new Date(),
@@ -75,7 +75,7 @@ module.exports = {
       },
       {
         name: 'WALL AIR CONDITIONER DAIKIN 9200BTU INVERTER',
-        price: 18300,
+        price: 18000,
         description:'Swing-type Inverter system works effectively with lower energy-consumption.',
         total_sale: '75',
         createdAt: new Date(),
@@ -85,7 +85,7 @@ module.exports = {
       },
       {
         name: 'TATAMI FAN HATARI HT-S16R2 16" WHITE',
-        price: 1290,
+        price: 1200,
         description:'i-COMFORT automatically adjusts speed due to the environment temperature',
         total_sale: '55',
         createdAt: new Date(),
@@ -95,7 +95,7 @@ module.exports = {
       },
       {
         name: 'SLIDE FAN SHARP PJ-SL181 JP 18" PINK',
-        price: 1140,
+        price: 1100,
         description:'3-Blade 18” propeller, wide airflow',
         total_sale: '59',
         createdAt: new Date(),
@@ -105,7 +105,7 @@ module.exports = {
       },
       {
         name: 'TATAMI FAN SHARP PJ-SL163CG 16” GRAY',
-        price: 830,
+        price: 800,
         description:'Height adjustment with push-button',
         total_sale: '52',
         createdAt: new Date(),
@@ -115,7 +115,7 @@ module.exports = {
       },
       {
         name: 'WASHER & DRYER PANASONIC 10/6KG INVERTER',
-        price: 48590,
+        price: 45000,
         description:'Inverter system works effectively to make your fabric clean with low operation noise.',
         total_sale: '38',
         createdAt: new Date(),
@@ -125,7 +125,7 @@ module.exports = {
       },
       {
         name: 'TOP LOAD WASHING MACHINE LG 13KG INVERTER',
-        price: 9500,
+        price: 9000,
         description:'Smart Inverter Technology eliminates wasted operation by efficiently controlling energy use.',
         total_sale: '42',
         createdAt: new Date(),
@@ -135,7 +135,7 @@ module.exports = {
       },
       {
         name: 'TOP LOAD WASHING MACHINE SAMSUNG 10KG',
-        price: 7490,
+        price: 7000,
         description:'Wobble pulsators generate a dynamic, multi-directional washing flow that prevents tangles and increases washing power.',
         total_sale: '30',
         createdAt: new Date(),
@@ -145,7 +145,7 @@ module.exports = {
       },
       {
         name: 'STEAM IRON 270ML',
-        price: 1690,
+        price: 1500,
         description:'40g/minute steam output, to gently soften clothes for easier ironing. 150g/min steam shot deep into fabrics at speed, removing even the most stubborn creases.',
         total_sale: '62',
         createdAt: new Date(),
@@ -155,7 +155,7 @@ module.exports = {
       },
       {
         name: 'STEAM IRON 200ML',
-        price: 690,
+        price: 700,
         description:'Vertical steam is suitable for delicate fabric details.',
         total_sale: '38',
         createdAt: new Date(),
@@ -165,7 +165,7 @@ module.exports = {
       },
       {
         name: 'STEAM IRON ELECTROLUX ESI5226 0.3L',
-        price: 1290,
+        price: 1200,
         description:'Inverter system works effectively to make your fabric clean with low operation noise.',
         total_sale: '41',
         createdAt: new Date(),
@@ -175,7 +175,7 @@ module.exports = {
       },
       {
         name: 'STEAM IRON PHILIPS GC2992/70 320ML',
-        price: 1490,
+        price: 1300,
         description:'Inverter system works effectively to make your fabric clean with low operation noise.',
         total_sale: '42',
         createdAt: new Date(),
@@ -185,7 +185,7 @@ module.exports = {
       },
       {
         name: 'APPLE Macbook Air 2020 (13.3", Ram 8GB, 512GB, Gold)',
-        price: 42900,
+        price: 40000,
         description:'Stunning 13.3-inch Retina display with True Tone technology',
         total_sale: '70',
         createdAt: new Date(),
@@ -195,7 +195,7 @@ module.exports = {
       },
       {
         name: 'DELL Gaming Notebook',
-        price: 25700,
+        price: 25000,
         description:'(15.6", Intel Core i5, RAM 8 GB, 1 TB+256 GB) W56636000THW10-G3-BK',
         total_sale: '45',
         createdAt: new Date(),
@@ -205,7 +205,7 @@ module.exports = {
       },
       {
         name: 'ASUS Gaming Notebook',
-        price: 39000,
+        price: 30000,
         description:'(15.6", Intel Core i5, Ram 8GB, 512GB, Bonfire Black) FX506LH-HN004T + Bag',
         total_sale: '30',
         createdAt: new Date(),
@@ -215,7 +215,7 @@ module.exports = {
       },
       {
         name: 'APPLE iPhone 11 (64GB, Black)',
-        price: 21900,
+        price: 20000,
         description:'Dual-camera system with 12MP Ultra Wide and Wide cameras; Night mode, Portrait mode, and 4K video up to 60fps',
         total_sale: '80',
         createdAt: new Date(),
@@ -225,7 +225,7 @@ module.exports = {
       },
       {
         name: 'HUAWEI Nova 7SE (Space Silver)',
-        price: 10900,
+        price: 10000,
         description:'CPU: Kirin 820',
         total_sale: '55',
         createdAt: new Date(),
@@ -235,7 +235,7 @@ module.exports = {
       },
       {
         name: 'HUAWEI P40 (Deep Sea Blue)',
-        price: 20900,
+        price: 20000,
         description:'OS: EMUI10 (Based On Android 10)',
         total_sale: '49',
         createdAt: new Date(),
@@ -245,7 +245,7 @@ module.exports = {
       },
       {
         name: 'SAMSUNG Galaxy Note 10+ (256GB, Aura Glow)',
-        price: 24800,
+        price: 24000,
         description:'Display: 6.8" Quad HD+ Dynamic AMOLED Infinity-O Display (3040x1440)',
         total_sale: '22',
         createdAt: new Date(),

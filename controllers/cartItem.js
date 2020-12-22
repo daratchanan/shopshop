@@ -54,11 +54,12 @@ exports.updateCartItem = async (req, res) => {
   if (quantity) cartItem.quantity = quantity;
   //if (user_id) cartItem.user_id = user_id;
   if (product_id) cartItem.product_id = product_id;
-  try{
+
+  try {
     await cartItem.save();
-  }catch(err){
-    console.error(err)
-  }
+  } catch (err) {
+    console.error(err);
+  };
 
   res.status(200).json({ cartItem });
 };
