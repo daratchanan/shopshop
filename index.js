@@ -1,10 +1,10 @@
 require("dotenv").config();
+require("./config/passport");
 
 const express = require("express");
 const db = require("./models");
 const app = express();
 
-require("./config/passport");
 
 const userRoutes = require("./routes/user");
 const productRoutes = require("./routes/product");
@@ -24,7 +24,6 @@ app.use((err, req, res, next) => {
    console.log(err);
    res.status(500).json({ message: `what happen ${err.message}` });
 });
-
 
 app.listen(process.env.PORT, () => {
    console.log(`Server is running at PORT ${process.env.PORT} `);

@@ -6,6 +6,8 @@ router.get('/top', productController.getTopProduct);
 router.get('/', productController.getProducts);
 
 router.get('/allProductType', productController.getAllProductTypes);
+router.get('/allProductType_id/:id', productController.getProductByType);
+
 router.get('/:id', productController.getProductById);
 router.post('/', upload.single("image"), productController.createProduct);
 router.put('/:id', productController.updateProduct);

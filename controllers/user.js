@@ -33,8 +33,8 @@ const register = async (req, res) => {
          res.status(201).send({ message: "User created.", token });
       }
    } catch (err) {
-      res.status(500).send({ message: err.message }); ''
-   }
+      res.status(500).send({ message: err.message }); 
+   };
 };
 
 const login = async (req, res) => {

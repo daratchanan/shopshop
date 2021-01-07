@@ -21,6 +21,19 @@ exports.getProductById = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+
+exports.getProductByType = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const allProductType_id = await db.Product.findAll({ where: { productType_id :id} })
+    res.status(200).json({ allProductType_id });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+
 exports.getTopProduct = async (req, res) => {
   try {
     const { limit } = req.query;

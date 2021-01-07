@@ -42,7 +42,7 @@ exports.createOrder = async (req, res) => {
          product_id: cartItem.product_id
       }))
 
-      await db.OrderItem.bulkCreate(newOrderItem)
+      await db.OrderItem.bulkCreate(newOrderItem);
 
       await db.CartItem.destroy({where: {
          user_id: id
