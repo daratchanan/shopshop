@@ -1,6 +1,7 @@
 const db = require("../models");
 
 exports.getAllCartItem = async (req, res) => {
+  try{
   const cartItem = await db.CartItem.findAll({ 
     where : {
       user_id: req.user.id
@@ -10,9 +11,14 @@ exports.getAllCartItem = async (req, res) => {
     }
   });
   res.status(200).json({ cartItem });
+}
+catch(error){
+  res.status(401).json({ message: "err.message" });
+}
 };
 
 exports.getCartItemById = async (req, res) => {
+ 
   try {
     const { id } = req.params;
     const cartItem = await db.CartItem.findOne({ where:{id} })
