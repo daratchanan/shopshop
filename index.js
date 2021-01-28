@@ -10,6 +10,7 @@ const userRoutes = require("./routes/user");
 const productRoutes = require("./routes/product");
 const cartItemRoutes = require("./routes/cartItem");
 const orderRoutes = require("./routes/order");
+const adminRoutes = require("./routes/admin");
 
 app.use(require('cors')());
 app.use(express.json());
@@ -19,6 +20,7 @@ app.use("/users", userRoutes);
 app.use("/products", productRoutes);
 app.use("/cartItems", cartItemRoutes);
 app.use("/orders", orderRoutes);
+app.use("/admin",adminRoutes);
 
 app.use((err, req, res, next) => {
    console.log(err);

@@ -10,6 +10,8 @@ router.get('/allProductType_id/:id', productController.getProductByType);
 
 router.get('/:id', productController.getProductById);
 router.post('/', upload.single("image"), productController.createProduct);
+
+
 router.put('/:id', productController.updateProduct);
 router.delete('/:id', productController.deleteProduct);
 
