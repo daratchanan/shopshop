@@ -47,7 +47,7 @@ const login = async (req, res) => {
                firstname: targerUser.firstname,
                email: targerUser.email,
             };
-            const token = jwt.sign(payLoad, process.env.SECRET, { expiresIn: 86400 });
+            const token = jwt.sign(payLoad, process.env.SECRET, { expiresIn: 60 });
             res.status(200).send({ token });
          } else {
             res.status(400).send({ message: "Email or password is wrong" });
